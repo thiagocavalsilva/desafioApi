@@ -71,5 +71,27 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
     expect(responseStatus).toBe(200);
    });
+
+   test("PUT /usuarios/{_id}", async ({ request }) => {
+    const response = await request.put(`${API_URL}/usuarios/${id}`, {
+      headers: {
+        Authorization: authorization,
+        "Content-Type": "application/json",
+      },
+      data: {
+        nome: "Fulano da Silva PUT",
+        email: Math.random() + "fulanoPUT@qa.com.br",
+        password: "teste",
+        administrador: "true",
+      },
+    });
+
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(200);
+   });
  
 });
