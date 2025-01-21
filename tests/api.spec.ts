@@ -24,7 +24,7 @@ test.describe("Suite de testes API ServRest", async () => {
     return authorization;
 
   });
-  
+
   test("GET /usuarios", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios`);
 
@@ -35,7 +35,28 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseStatus)
     console.log(responseBody)
     expect(responseStatus).toBe(200);
- 
+
+  });
+
+  test("POST /usuarios", async ({ request }) => {
+    const response = await request.post(`${API_URL}/usuarios`, {
+      headers: {
+        Authorization: authorization,
+        "Content-Type": "application/json",
+      },
+      data: {
+        nome: "Fulano da Silva POST",
+        email: Math.random() + "fulanoPOST@qa.com.br",
+        password: "teste",
+        administrador: "true",
+      },
+    });
+    console.log(response)
+    console.log(response.status());
+    expect(response.status()).toBe(201);
+    let responseBody = await response.json();
+    id = responseBody._id;
+    console.log(responseBody)
   });
 
 });
