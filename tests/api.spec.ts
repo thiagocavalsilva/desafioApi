@@ -93,5 +93,19 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
     expect(responseStatus).toBe(200);
    });
- 
+   
+   test("DELETE /usuarios/{_id}", async ({ request }) => {
+    const response = await request.delete(`${API_URL}/usuarios/${id}`, {
+      headers: {
+        Authorization: authorization,
+        "Content-Type": "application/json",
+      },
+    });
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(200);
+   });
 });
