@@ -31,3 +31,6 @@ Execute todos os testes para o ambiente UAT:
 Execute testes para o ambiente de  para o conjunto api.spec.ts:
 
 `npm run test.api sit api.spec.ts`
+
+Execute o seguinte comando para Report
+`npx playwright show-report`
