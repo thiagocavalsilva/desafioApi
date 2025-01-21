@@ -57,4 +57,19 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
+  test("GET /usuarios/{_id}", async ({ request }) => {
+    const response = await request.get(`${API_URL}/usuarios/${id}`, {
+      headers: {
+        Authorization: authorization,
+        "Content-Type": "application/json",
+      },
+    });
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(200);
+   });
+ 
 });
