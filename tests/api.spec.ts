@@ -22,7 +22,6 @@ test.describe("Suite de testes API ServRest", async () => {
     authorization = responseBody.authorization;
     console.log(responseBody)
     return authorization;
-
   });
 
   test("GET /usuarios", async ({ request }) => {
@@ -35,7 +34,6 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseStatus)
     console.log(responseBody)
     expect(responseStatus).toBe(200);
-
   });
 
   test("POST /usuarios", async ({ request }) => {
