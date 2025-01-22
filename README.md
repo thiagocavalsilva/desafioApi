@@ -37,12 +37,19 @@ Execute todos os testes para o ambiente UAT:
 
 `npm run test.api uat`
 
+```
+
 Execute testes para o ambiente de  para o conjunto api.spec.ts:
 
 `npm run test.api sit api.spec.ts`
 
+```
+
 Execute o seguinte comando para Report
+
 `npx playwright show-report`
+
+```
 
 PipeLine 
 integrado com o Git Actions
