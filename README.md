@@ -10,6 +10,15 @@ O teste de API é a base do desenvolvimento de software moderno, garantindo que 
 - Automação: as ferramentas CLI podem ser facilmente integradas aos pipelines de CI/CD, facilitando a automação.
 - Personalização: você pode personalizar comandos CLI para atender às suas necessidades específicas, tornando seu fluxo de trabalho mais eficiente.
 
+## Esses testes contempam os cenários de : 
+- Consulta de Usuários 
+- Inclusão de usuário
+- Consulta de Usuário por Id
+- Alteração de usuário 
+- Exclusão de usuário
+
+Obs: Mais detelahes no arquivo api.spec.ts
+
 ## Configurando seu ambiente
 
 Antes de mergulhar no código, certifique-se de ter o Node.js e o npm instalados. Em seguida, instale o Playwright com TypeScript:
@@ -34,3 +43,6 @@ Execute testes para o ambiente de  para o conjunto api.spec.ts:
 
 Execute o seguinte comando para Report
 `npx playwright show-report`
+
+PipeLine 
+integrado com o Git Actions
