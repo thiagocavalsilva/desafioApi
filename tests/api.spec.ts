@@ -36,6 +36,9 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
   });
 
+ 
+
+
   test("POST /usuarios", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
