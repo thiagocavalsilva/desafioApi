@@ -124,7 +124,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-   test("CT-06-POST /usuarios", async ({ request }) => {
+   test("CT-06-POST /usuarios / Incluir Usuário" , async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -160,7 +160,7 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
    });
 
-   test("CT08-GET /usuarios/{_id}", async ({ request }) => {
+   test("CT08-GET /usuarios/{_id} / Conulta Todos", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
