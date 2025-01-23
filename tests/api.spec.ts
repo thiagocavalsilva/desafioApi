@@ -24,7 +24,7 @@ test.describe("Suite de testes API ServRest", async () => {
     return authorization;
   });
 
-  test("CT-01-GET /usuarios", async ({ request }) => {
+  test("CT-01-Deve poder consultar todos os cadastros", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios`);
 
     console.log(response)
@@ -36,7 +36,7 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
   });
 
-  test("CT-02-POST /usuarios / campo nome vazio", async ({ request }) => {
+  test("CT-02-Deve validar obrigatoriedade do campo nome sem preenchimento", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -57,7 +57,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-  test("CT-03-POST /usuarios / campo Email vazio - Valida status code e mensagem de erro", async ({ request }) => {
+  test("CT-03-Deve validar obrigatoriedade de preenchimento do campo Email, Status Code e Mensagem de erro", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -81,7 +81,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-  test("CT04-POST /usuarios / campo Password vazio - Valida status code e mensagem de erro", async ({ request }) => {
+  test("CT04-Deve validar obrigatoriedade de preenchimento do campo Password, Status Code e Mensagem de erro", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -103,7 +103,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-  test("CT-05-POST /usuarios / campo administrador vazio", async ({ request }) => {
+  test("CT-05-Deve validar obrigatoriedade de preenchimento do campo administrador, Status Code e Mensagem de erro", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -124,7 +124,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-   test("CT-06-POST /usuarios / Incluir Usuário" , async ({ request }) => {
+   test("CT-06-Deve poder incluir um usuário" , async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -145,7 +145,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-  test("CT07-GET /usuarios/{_id} Invalido", async ({ request }) => {
+  test("CT07-Deve validar Código ID Invalido", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
@@ -176,7 +176,7 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
 });
 
-   test("CT-09-PUT /usuarios/{_id}", async ({ request }) => {
+   test("CT-09-Deve poder alterar Usuário", async ({ request }) => {
     const response = await request.put(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
@@ -198,7 +198,7 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
    });
    
-   test("CT-10-DELETE /usuarios/{_id}", async ({ request }) => {
+   test("CT-10-Deve poder Deletar", async ({ request }) => {
     const response = await request.delete(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
