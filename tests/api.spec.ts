@@ -24,7 +24,7 @@ test.describe("Suite de testes API ServRest", async () => {
     return authorization;
   });
 
-  test("GET /usuarios", async ({ request }) => {
+  test("CT-01-GET /usuarios", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios`);
 
     console.log(response)
@@ -36,7 +36,7 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
   });
 
-  test("POST /usuarios / campo nome vazio", async ({ request }) => {
+  test("CT-02-POST /usuarios / campo nome vazio", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -57,7 +57,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-  test("POST /usuarios / campo Email vazio", async ({ request }) => {
+  test("CT-03-POST /usuarios / campo Email vazio - Valida status code e mensagem de erro", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -73,12 +73,15 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(response)
     console.log(response.status());
     expect(response.status()).toBe(400);
-    let responseBody = await response.json();
+    console.log(response)
+    console.log(response.body);
+    const responseBody = await response.json();
+    expect(responseBody).toHaveProperty("email", "email não pode ficar em branco");
     id = responseBody._id;
     console.log(responseBody)
   });
 
-  test("POST /usuarios / campo Password vazio", async ({ request }) => {
+  test("CT04-POST /usuarios / campo Password vazio - Valida status code e mensagem de erro", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -94,12 +97,13 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(response)
     console.log(response.status());
     expect(response.status()).toBe(400);
-    let responseBody = await response.json();
+    const responseBody = await response.json();
+    expect(responseBody).toHaveProperty("password", "password não pode ficar em branco");
     id = responseBody._id;
     console.log(responseBody)
   });
 
-  test("POST /usuarios / campo administrador vazio", async ({ request }) => {
+  test("CT-05-POST /usuarios / campo administrador vazio", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -120,7 +124,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-   test("POST /usuarios", async ({ request }) => {
+   test("CT-06-POST /usuarios", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -141,7 +145,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-  test("GET /usuarios/{_id}", async ({ request }) => {
+  test("CT07-GET /usuarios/{_id} Invalido", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
@@ -156,7 +160,23 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
    });
 
-   test("PUT /usuarios/{_id}", async ({ request }) => {
+   test("CT08-GET /usuarios/{_id}", async ({ request }) => {
+    const response = await request.get(`${API_URL}/usuarios/${id}`, {
+      headers: {
+        Authorization: authorization,
+        "Content-Type": "application/json",
+      },
+    });
+
+    const responseStatus = response.status(); 
+    const responseBody = await response.json();
+
+    console.log(responseStatus);
+    console.log(responseBody);
+    expect(responseStatus).toBe(200);
+});
+
+   test("CT-09-PUT /usuarios/{_id}", async ({ request }) => {
     const response = await request.put(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
@@ -178,7 +198,7 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
    });
    
-   test("DELETE /usuarios/{_id}", async ({ request }) => {
+   test("CT-10-DELETE /usuarios/{_id}", async ({ request }) => {
     const response = await request.delete(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
