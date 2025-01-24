@@ -24,7 +24,7 @@ test.describe("Suite de testes API ServRest", async () => {
     return authorization;
   });
 
-  test("CT-01-Deve poder consultar todos os cadastros", async ({ request }) => {
+  test("CT-01-GET-Deve poder consultar todos os cadastros", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios`);
 
     console.log(response)
@@ -36,7 +36,7 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
   });
 
-  test("CT-02-Deve validar obrigatoriedade do campo nome sem preenchimento", async ({ request }) => {
+  test("CT-02-POST-Deve validar obrigatoriedade do campo nome sem preenchimento", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -57,7 +57,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-  test("CT-03-Deve validar obrigatoriedade de preenchimento do campo Email, Status Code e Mensagem de erro", async ({ request }) => {
+  test("CT-03-POST-Deve validar obrigatoriedade de preenchimento do campo Email, Status Code e Mensagem de erro", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -81,7 +81,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-  test("CT04-Deve validar obrigatoriedade de preenchimento do campo Password, Status Code e Mensagem de erro", async ({ request }) => {
+  test("CT04-POST-Deve validar obrigatoriedade de preenchimento do campo Password, Status Code e Mensagem de erro", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -103,7 +103,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-  test("CT-05-Deve validar obrigatoriedade de preenchimento do campo administrador, Status Code e Mensagem de erro", async ({ request }) => {
+  test("CT-05-POST-Deve validar obrigatoriedade de preenchimento do campo administrador, Status Code e Mensagem de erro", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -124,7 +124,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-   test("CT-06-Deve poder incluir um usuário" , async ({ request }) => {
+   test("CT-06-POST-Deve poder incluir um usuário" , async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
         Authorization: authorization,
@@ -145,7 +145,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
   });
 
-  test("CT07-Deve validar Código ID Invalido", async ({ request }) => {
+  test("CT07-GET-Deve validar Código ID Invalido", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
@@ -160,7 +160,7 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
    });
 
-   test("CT08-GET /usuarios/{_id} / Conulta Todos", async ({ request }) => {
+   test("CT08-GET-Deve Consultar Todos", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
@@ -176,7 +176,9 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
 });
 
-   test("CT-09-Deve poder alterar Usuário", async ({ request }) => {
+
+
+   test("CT-09-PUT-Deve poder alterar Usuário", async ({ request }) => {
     const response = await request.put(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
@@ -198,7 +200,104 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(responseStatus).toBe(200);
    });
    
-   test("CT-10-Deve poder Deletar", async ({ request }) => {
+   test("CT-10-PUT-Deve retornar erro - obrigatoriedade de preenchimento do campo nome", async ({ request }) => {
+    const response = await request.put(`${API_URL}/usuarios/${id}`, {
+      headers: {
+        Authorization: authorization,
+        "Content-Type": "application/json",
+      },
+      data: {
+        nome: "",
+        email: Math.random() + "fulanoPUT@qa.com.br",
+        password: "teste",
+        administrador: "true",
+      },
+    });
+  
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+  
+    //console.log(responseStatus)
+    //console.log(responseBody)
+    //expect(responseStatus).toBe(400);
+
+    console.log(response)
+    console.log(response.status());
+    expect(response.status()).toBe(400);
+    console.log(response)
+    console.log(response.body);
+    expect(responseBody).toHaveProperty("nome", "nome não pode ficar em branco");
+    id = responseBody._id;
+    console.log(responseBody)
+   });
+
+   test("CT-11-Deve retornar erro - obrigatoriedade de preenchimento do campo Email e status code 400", async ({ request }) => {
+    const response = await request.put(`${API_URL}/usuarios/${id}`, {
+      headers: {
+        Authorization: authorization,
+        "Content-Type": "application/json",
+      },
+      data: {
+        nome: "Fulano da Silva PUT",
+        email: "",
+        password: "teste",
+        administrador: "true",
+      },
+    });
+  
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+  
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(400);
+   });
+
+   test("CT-12-Deve retornar erro - obrigatoriedade de preenchimento do campo Password e status code 400", async ({ request }) => {
+    const response = await request.put(`${API_URL}/usuarios/${id}`, {
+      headers: {
+        Authorization: authorization,
+        "Content-Type": "application/json",
+      },
+      data: {
+        nome: "Fulano da Silva PUT",
+        email: Math.random() + "fulanoPUT@qa.com.br",
+        password: "",
+        administrador: "true",
+      },
+    });
+  
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+  
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(400);
+   });
+
+   test("CT-13-Deve retornar erro - obrigatoriedade de preenchimento do campo Administrador e status code 400", async ({ request }) => {
+    const response = await request.put(`${API_URL}/usuarios/${id}`, {
+      headers: {
+        Authorization: authorization,
+        "Content-Type": "application/json",
+      },
+      data: {
+        nome: "Fulano da Silva PUT",
+        email: Math.random() + "fulanoPUT@qa.com.br",
+        password: "teste",
+        administrador: "",
+      },
+    });
+  
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+  
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(400);
+   });
+
+   test("CT-14-Deve poder Deletar", async ({ request }) => {
     const response = await request.delete(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
