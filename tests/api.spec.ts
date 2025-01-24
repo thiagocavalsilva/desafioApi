@@ -216,10 +216,6 @@ test.describe("Suite de testes API ServRest", async () => {
   
     let responseStatus = await response.status();
     let responseBody = await response.json();
-  
-    //console.log(responseStatus)
-    //console.log(responseBody)
-    //expect(responseStatus).toBe(400);
 
     console.log(response)
     console.log(response.status());
@@ -248,9 +244,14 @@ test.describe("Suite de testes API ServRest", async () => {
     let responseStatus = await response.status();
     let responseBody = await response.json();
   
-    console.log(responseStatus)
+    console.log(response)
+    console.log(response.status());
+    expect(response.status()).toBe(400);
+    console.log(response)
+    console.log(response.body);
+    expect(responseBody).toHaveProperty("email", "email não pode ficar em branco");
+    id = responseBody._id;
     console.log(responseBody)
-    expect(responseStatus).toBe(400);
    });
 
    test("CT-12-Deve retornar erro - obrigatoriedade de preenchimento do campo Password e status code 400", async ({ request }) => {
@@ -270,9 +271,14 @@ test.describe("Suite de testes API ServRest", async () => {
     let responseStatus = await response.status();
     let responseBody = await response.json();
   
-    console.log(responseStatus)
+    console.log(response)
+    console.log(response.status());
+    expect(response.status()).toBe(400);
+    console.log(response)
+    console.log(response.body);
+    expect(responseBody).toHaveProperty("password", "password não pode ficar em branco");
+    id = responseBody._id;
     console.log(responseBody)
-    expect(responseStatus).toBe(400);
    });
 
    test("CT-13-Deve retornar erro - obrigatoriedade de preenchimento do campo Administrador e status code 400", async ({ request }) => {
@@ -292,9 +298,15 @@ test.describe("Suite de testes API ServRest", async () => {
     let responseStatus = await response.status();
     let responseBody = await response.json();
   
-    console.log(responseStatus)
+    console.log(response)
+    console.log(response.status());
+    expect(response.status()).toBe(400);
+    console.log(response)
+    console.log(response.body);
+    expect(responseBody).toHaveProperty("administrador", "administrador deve ser 'true' ou 'false'");
+    id = responseBody._id;
     console.log(responseBody)
-    expect(responseStatus).toBe(400);
+ 
    });
 
    test("CT-14-Deve poder Deletar", async ({ request }) => {
