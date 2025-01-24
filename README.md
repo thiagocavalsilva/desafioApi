@@ -54,4 +54,5 @@ Execute o seguinte comando para Report
 PipeLine 
 integrado com o Git Actions
 
-Obs: qualquer coisa entre em contato através do Tel: 13988172204 Thiago C Silva
+Obs: Qualquer coisa entre em contato 
+(www.linkedin.com/in/thiago-silva-ftk)[Thiago-Linkdlin] 
