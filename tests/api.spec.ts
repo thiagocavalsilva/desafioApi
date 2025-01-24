@@ -227,7 +227,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
    });
 
-   test("CT-11-Deve retornar erro - obrigatoriedade de preenchimento do campo Email e status code 400", async ({ request }) => {
+   test("CT-11-PUT-Deve retornar erro - obrigatoriedade de preenchimento do campo Email e status code 400", async ({ request }) => {
     const response = await request.put(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
@@ -254,7 +254,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
    });
 
-   test("CT-12-Deve retornar erro - obrigatoriedade de preenchimento do campo Password e status code 400", async ({ request }) => {
+   test("CT-12-PUT-Deve retornar erro - obrigatoriedade de preenchimento do campo Password e status code 400", async ({ request }) => {
     const response = await request.put(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
@@ -281,7 +281,7 @@ test.describe("Suite de testes API ServRest", async () => {
     console.log(responseBody)
    });
 
-   test("CT-13-Deve retornar erro - obrigatoriedade de preenchimento do campo Administrador e status code 400", async ({ request }) => {
+   test("CT-13-PUT-Deve retornar erro - obrigatoriedade de preenchimento do campo Administrador e status code 400", async ({ request }) => {
     const response = await request.put(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
@@ -309,7 +309,28 @@ test.describe("Suite de testes API ServRest", async () => {
  
    });
 
-   test("CT-14-Deve poder Deletar", async ({ request }) => {
+   test("CT-14-DELETE-Validação de Id invalido mensagem e status code", async ({ request }) => {
+    const response = await request.delete(`${API_URL}/usuarios/${99999999}`, {
+      headers: {
+        Authorization: authorization,
+        "Content-Type": "application/json",
+            },
+         });
+      let responseStatus = await response.status();
+    let responseBody = await response.json();
+  
+    console.log(response)
+    console.log(response.status());
+    expect(response.status()).toBe(200);
+    console.log(response)
+    console.log(response.body);
+    expect(responseBody).toHaveProperty("message", "Nenhum registro excluído");
+    id = responseBody._id;
+    console.log(responseBody)
+ 
+   });
+
+   test("CT-15-DELETE-Deve poder Deletar", async ({ request }) => {
     const response = await request.delete(`${API_URL}/usuarios/${id}`, {
       headers: {
         Authorization: authorization,
