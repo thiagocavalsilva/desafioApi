@@ -1,0 +1,1128 @@
+<testsuites id="" name="" tests="15" failures="0" skipped="0" errors="0" time="3.4300460000000004">
+<testsuite name="api.spec.ts" timestamp="2025-01-24T20:59:40.624Z" hostname="chromium" tests="15" failures="0" skipped="0" time="2.757" errors="0">
+<testcase name="Suite de testes API ServRest › CT-01-GET-Deve poder consultar todos os cadastros" classname="api.spec.ts" time="0.423">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgxLCJleHAiOjE3Mzc3NTI5ODF9.fqCiODLJrjDukfXke2r0Qo36-IdYzbWWQrhVyYWsHzs'[39m
+}
+APIResponse: 200 OK
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 6dddd0537dd945bc0031dd365ce65170
+  Date: Fri, 24 Jan 2025 20:59:41 GMT
+  Server: Google Frontend
+  Content-Length: 30836
+[33m200[39m
+{
+  quantidade: [33m139[39m,
+  usuarios: [
+    {
+      nome: [32m'Ms. Lindsay Cartwright'[39m,
+      email: [32m'shanelle.ondricka@gmail.com'[39m,
+      password: [32m'2V#6#z#Kq6J@VE3*'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'0oSZN8MfcnMTTR7Z'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'fulano@qa.com'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'0uxuPY0cbmQhpEz1'[39m
+    },
+    {
+      nome: [32m'Arvid'[39m,
+      email: [32m'Harmon.Quitzon64@hotmail.com'[39m,
+      password: [32m'0kHdh2QdJcWAXjB'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'0xM1yoLspOIIafh8'[39m
+    },
+    {
+      nome: [32m'Miss Gregorio Walsh'[39m,
+      email: [32m'otha.bergnaum@hotmail.com'[39m,
+      password: [32m'l2%@k&^#*$hY@v'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'1GFR4qv7UZgkk9tJ'[39m
+    },
+    {
+      nome: [32m'Bem Vindo Admin Teste'[39m,
+      email: [32m'usuarioAdmin@gmail.com'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'1N7DuCBRuUMrwHl0'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.8803949246858178fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'2wCnSkOiCmX6ZSJt'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.28119295305044534fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'3AOHZPc8k0ByxqqV'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.6694614386131306fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'3CMcAymllGE2VywY'[39m
+    },
+    {
+      nome: [32m'Maria Helena Abreu'[39m,
+      email: [32m'leandro99@example.org'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'3MaMAqWsljcfbDMM'[39m
+    },
+    {
+      nome: [32m'Ron Krajcik IV'[39m,
+      email: [32m'Aletha71@gmail.com'[39m,
+      password: [32m'4miJiIh6V72RhWd'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'4Ue4UKvnWANavjNG'[39m
+    },
+    {
+      nome: [32m'Usuário Teste'[39m,
+      email: [32m'usuarioteste@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'4bpNbxNMCLYUiEtY'[39m
+    },
+    {
+      nome: [32m'Della'[39m,
+      email: [32m'Muriel_Collier@hotmail.com'[39m,
+      password: [32m'EzYEbIZy5Lhb33G'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'4h3y3Q0qtxq9uAcO'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.6663723033487925fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'5QpEyqZMybblMW1b'[39m
+    },
+    {
+      nome: [32m'João Silva'[39m,
+      email: [32m'joao.silva1737731529737@teste.com'[39m,
+      password: [32m'senha123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'5h8W51bY78pUXmsY'[39m
+    },
+    {
+      nome: [32m'Nardo'[39m,
+      email: [32m'nardo2@gmail.com'[39m,
+      password: [32m'senha'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'6fr1wcUGL2LHgsHf'[39m
+    },
+    {
+      nome: [32m'Reggie'[39m,
+      email: [32m'Tabitha_Connelly@gmail.com'[39m,
+      password: [32m'urEByIuw8lwJuTQ'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'7taCLE3uwyg2ebmd'[39m
+    },
+    {
+      nome: [32m'Thiago Teste'[39m,
+      email: [32m'Eldora@gdot.com'[39m,
+      password: [32m'12345'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'7ylnODTnedicx1Tn'[39m
+    },
+    {
+      nome: [32m'Laura Silva'[39m,
+      email: [32m'jaqueline.ziemann@yahoo.com.br'[39m,
+      password: [32m'123laura'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'84yZtjOpq37Cgq2Q'[39m
+    },
+    {
+      nome: [32m'Dr. Trent Okuneva'[39m,
+      email: [32m'jaqueline.ziemann@yahoo.com'[39m,
+      password: [32m'K0C*5!tIoiAk8EM'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'96wQEBfAMQy6BO5s'[39m
+    },
+    {
+      nome: [32m'Whitney'[39m,
+      email: [32m'Gia_Kovacek70@gmail.com'[39m,
+      password: [32m'CtmVyrw3oQ0YDPV'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'9mfyYCloGdkUWRKR'[39m
+    },
+    {
+      nome: [32m'Joana Souza'[39m,
+      email: [32m'joana.souza@yahoo.com'[39m,
+      password: [32m'123laura'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'9z0AZ8Zpr4laXNOi'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.5857610500423338fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'AUO8cBtDkiHRkA07'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva POST'[39m,
+      email: [32m'0.016378888987314433fulanoPOST@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'B20PbaaIYKx14hH6'[39m
+    },
+    {
+      nome: [32m'Gudrun'[39m,
+      email: [32m'Ryan91@hotmail.com'[39m,
+      password: [32m'f1AdFKPKf06rmoP'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'CgBuvBgjpsJkin1M'[39m
+    },
+    {
+      nome: [32m'Jerrod Kertzmann Jr.'[39m,
+      email: [32m'boyd.quigley@yahoo.com'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'DGwNk6XsqcNFOeOL'[39m
+    },
+    {
+      nome: [32m'vaninho'[39m,
+      email: [32m'6ra7ozi8@gmail.com'[39m,
+      password: [32m'123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'DWJydrWl5A6E4pqv'[39m
+    },
+    {
+      nome: [32m'Usu�rio de Teste'[39m,
+      email: [32m'sousasofia@example.org'[39m,
+      password: [32m' (axd4Yo0Kc'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'DsVNNEBzJRLJ3s2g'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.45237868786848634fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'E0FZOzYKMynsdAg4'[39m
+    },
+    {
+      nome: [32m'Gilberto'[39m,
+      email: [32m'Salma.Hoppe@hotmail.com'[39m,
+      password: [32m'aoqD8T6vfZ0H37y'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'EFKSLruBZiu896AR'[39m
+    },
+    {
+      nome: [32m'Stan'[39m,
+      email: [32m'Benton24@yahoo.com'[39m,
+      password: [32m'M4U0g1QCyMTgx4B'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'EJa82rVvf0mDykm7'[39m
+    },
+    {
+      nome: [32m'Danial Brekke'[39m,
+      email: [32m'ian.jaskolski@yahoo.com'[39m,
+      password: [32m'8ArVH33JFo3tc0^'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'ESLoPoawM3ermXli'[39m
+    },
+    {
+      nome: [32m'Neha'[39m,
+      email: [32m'Keanu0@hotmail.com'[39m,
+      password: [32m'93XkkNRRjihutOk'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'EXKVNxQZiL62AuvR'[39m
+    },
+    {
+      nome: [32m'Mauricio'[39m,
+      email: [32m'mauricioneis15@gmail.com'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'FNR5ryhJ4JtPaX8h'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.027805989454366964fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'G8nsZnzCJHUpliH2'[39m
+    },
+    {
+      nome: [32m'Nardo'[39m,
+      email: [32m'nardo@gmail.com'[39m,
+      password: [32m'senha'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'GuLZMjDpPK8UpUfx'[39m
+    },
+    {
+      nome: [32m'Albert Hammes Sr.'[39m,
+      email: [32m'adaline.sporer@hotmail.com'[39m,
+      password: [32m'RT*Eq8oy^'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'GvXc2lwfgkA2U5fb'[39m
+    },
+    {
+      nome: [32m'vaninho'[39m,
+      email: [32m'u2a907m7@gmail.com'[39m,
+      password: [32m'123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'H47QtL4H8R5iqGmR'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.7282554534517811fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'HPi0sJo2cqFOIsQq'[39m
+    },
+    {
+      nome: [32m'Thiago Teste'[39m,
+      email: [32m'Connor@gdot.com'[39m,
+      password: [32m'12345'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'HoU6Rlnu1pNuwDjj'[39m
+    },
+    {
+      nome: [32m'João Silva'[39m,
+      email: [32m'joao.silva1737742550958@teste.com'[39m,
+      password: [32m'senha123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'IfE7J04QNrA1XvWR'[39m
+    },
+    {
+      nome: [32m'João Silva'[39m,
+      email: [32m'joao.silva1737731529552@teste.com'[39m,
+      password: [32m'senha123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'J2Ei547RrKybBp18'[39m
+    },
+    {
+      nome: [32m'Dianna'[39m,
+      email: [32m'rolando.gleason@gmail.com'[39m,
+      password: [32m'yo1mqy8h'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'K3h5qUpzekpxtrHc'[39m
+    },
+    {
+      nome: [32m'Valid Name'[39m,
+      email: [32m'registered@example.com'[39m,
+      password: [32m'ValidPassword123'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'K9GwwHEovhEHaErW'[39m
+    },
+    {
+      nome: [32m'João Silva'[39m,
+      email: [32m'joao.silva1737731529919@teste.com'[39m,
+      password: [32m'senha123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'KkY67n0vGSIabeDw'[39m
+    },
+    {
+      nome: [32m'Cintia maria'[39m,
+      email: [32m'luara.silva@qa.com'[39m,
+      password: [32m'123cintia'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'KwwSINkFaSK0BRAA'[39m
+    },
+    {
+      nome: [32m'Athena Reichert'[39m,
+      email: [32m'candis.lueilwitz@gmail.com'[39m,
+      password: [32m'#$tw2el*2Ns'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'LFTAZxQrqgmNyc2L'[39m
+    },
+    {
+      nome: [32m'Tyra'[39m,
+      email: [32m'Rowena_Simonis31@hotmail.com'[39m,
+      password: [32m'lcKZYGLaNC_2dCs'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'MQqGpaSZdsbUUaFW'[39m
+    },
+    {
+      nome: [32m'Dimitri'[39m,
+      email: [32m'Clint7@yahoo.com'[39m,
+      password: [32m'dPo0LI8jmGM_Lwb'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'MYzlr66UJds20Oy4'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.47868115332909844fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'MudguMgSHhHcTxdc'[39m
+    },
+    {
+      nome: [32m'Ms. Kathrine Volkman'[39m,
+      email: [32m'damon.feeney@yahoo.com'[39m,
+      password: [32m'net.datafaker.Password@30a62a5b'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'N0DE2zMh25AULVVp'[39m
+    },
+    {
+      nome: [32m'Kellie Bernier'[39m,
+      email: [32m'Domenick_Schowalter84@hotmail.com'[39m,
+      password: [32m'l9lc8jQ9qX00csO'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'Nrf9Zkf5vU30YdYw'[39m
+    },
+    {
+      nome: [32m'Ronaldo Brasil'[39m,
+      email: [32m'emailronaldoteste@gmail.com'[39m,
+      password: [32m'strongpassword12344321'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'PD6OG03xXWpIQ18S'[39m
+    },
+    {
+      nome: [32m'Sylvester Ortiz'[39m,
+      email: [32m'devorah.corwin@hotmail.com'[39m,
+      password: [32m'*!L4d1Dl2'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'PEdeuuByGoajDukO'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.6588341024114905fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'PH1Pj531hgDneCt5'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.3781964743191353fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'PO0R4PVYbZAARofw'[39m
+    },
+    {
+      nome: [32m'Bonnie Dach'[39m,
+      email: [32m'rebbeca.ondricka@gmail.com'[39m,
+      password: [32m'%PO6aF^h'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'PdxDtsNtAccuzVIo'[39m
+    },
+    {
+      nome: [32m'Felipa'[39m,
+      email: [32m'Elenora.Wolf53@gmail.com'[39m,
+      password: [32m'lgbqBU7DERmJHX4'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'Q3PikULoRh207VYq'[39m
+    },
+    {
+      nome: [32m'Joao teste'[39m,
+      email: [32m'joao@teste.com'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'RX7choEtwDgSGsEM'[39m
+    },
+    {
+      nome: [32m'Mekhi'[39m,
+      email: [32m'Roxanne.MacGyver@yahoo.com'[39m,
+      password: [32m'wpxXHA6CbqKsroR'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'RpJkCGZsbbFrRmJD'[39m
+    },
+    {
+      nome: [32m'Sara Gleason'[39m,
+      email: [32m'Damian_Beahan24@yahoo.com'[39m,
+      password: [32m'4DdRjA9K1CgLPQ0'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'S3tfLQtFHgt48Rvu'[39m
+    },
+    {
+      nome: [32m'Luísa Marques'[39m,
+      email: [32m'LuísaMarques@yahoo.com'[39m,
+      password: [32m'484BKOVs'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'S5v3hl0HH7Vv2Orj'[39m
+    },
+    {
+      nome: [32m'Mike Mitchell'[39m,
+      email: [32m'shaunte.mclaughlin@hotmail.com'[39m,
+      password: [32m'net.datafaker.Password@ad5cffa'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'SoXMQNx3nsoRM71K'[39m
+    },
+    {
+      nome: [32m'Jan Blanda'[39m,
+      email: [32m'naomi.kuhlman@gmail.com'[39m,
+      password: [32m'yUcN#e87MY7'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'T1ZDFf8qcrV0ez8J'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.8135850559469449fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'T2cj1p2N9pR5a6lJ'[39m
+    },
+    {
+      nome: [32m'João Silva'[39m,
+      email: [32m'joao.silva1737731529348@teste.com'[39m,
+      password: [32m'senha123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'T8bDRcBWq4KxkZyE'[39m
+    },
+    {
+      nome: [32m'Valid Name'[39m,
+      email: [32m'valid@example.com'[39m,
+      password: [32m'ValidPassword123'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'UrUfZXsfwQ3di1Fd'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.8625752983865884fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'V8NFeCQADnUqprE4'[39m
+    },
+    {
+      nome: [32m'Miss Elizabeth Orn'[39m,
+      email: [32m'terese.lubowitz@gmail.com'[39m,
+      password: [32m'xd4Y#O4&^'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'VMm8z1Hry0G0K0Hn'[39m
+    },
+    {
+      nome: [32m'Cypress Test'[39m,
+      email: [32m'defaultUser3@example.com'[39m,
+      password: [32m'password123'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'WRcCRnAylm170WJi'[39m
+    },
+    {
+      nome: [32m'Hector'[39m,
+      email: [32m'Kenyon.Bernhard@hotmail.com'[39m,
+      password: [32m'CcSumEHLdDKoEsl'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'XFIRQ0wioi4hFjwk'[39m
+    },
+    {
+      nome: [32m'Dr. Shaun Torp'[39m,
+      email: [32m'Velda.Strosin1@gmail.com'[39m,
+      password: [32m'bwBsBpQFuGoJhQH'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'XFb8VSslLAF2o0uU'[39m
+    },
+    {
+      nome: [32m'vaninho'[39m,
+      email: [32m'vaninho1@gmail.com'[39m,
+      password: [32m'123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'XjmEEUKDh4YPW1Pa'[39m
+    },
+    {
+      nome: [32m'Samuel Garcia'[39m,
+      email: [32m'SamuelGarcia@yahoo.com'[39m,
+      password: [32m'817MjAtX'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'XusZygk3kx19SCyc'[39m
+    },
+    {
+      nome: [32m'Oswaldo McClure'[39m,
+      email: [32m'lani.nolan@hotmail.com'[39m,
+      password: [32m'net.datafaker.Password@539ee811'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'XzJr3rWYBhk4aNXn'[39m
+    },
+    {
+      nome: [32m'Mike'[39m,
+      email: [32m'Gust.Heller@yahoo.com'[39m,
+      password: [32m'rdAWMXrcQNaax3P'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'YPGDSr47RbE2a2CG'[39m
+    },
+    {
+      nome: [32m'Anya'[39m,
+      email: [32m'Reggie_Rau@gmail.com'[39m,
+      password: [32m'fpA7YGXKq4EUn8S'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'a5Opiv5gYX6gFYhn'[39m
+    },
+    {
+      nome: [32m'Helena'[39m,
+      email: [32m'Hugh.Koch15@yahoo.com'[39m,
+      password: [32m'_LKCQI_N7z5Zoej'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'a6Q3a0msGOMwlxx1'[39m
+    },
+    {
+      nome: [32m'teste'[39m,
+      email: [32m'teste@teste.com'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'aBfDDvpfCcEDg7xr'[39m
+    },
+    {
+      nome: [32m'vaninho'[39m,
+      email: [32m'7ze3563i@gmail.com'[39m,
+      password: [32m'123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'buLHhlUjh3bbohu0'[39m
+    },
+    {
+      nome: [32m'Marlon'[39m,
+      email: [32m'Isabel4@gmail.com'[39m,
+      password: [32m'BUuDPMtT1p0HU5D'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'c3uXH7zAfNSpEe10'[39m
+    },
+    {
+      nome: [32m'Bella Aragão'[39m,
+      email: [32m'BellaAragão@yahoo.com'[39m,
+      password: [32m'123laura'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'c4MSCnb93tjuwgOh'[39m
+    },
+    {
+      nome: [32m'João Silva'[39m,
+      email: [32m'joao.silva1737742553058@teste.com'[39m,
+      password: [32m'senha123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'cMbuomwB2VMpyIOH'[39m
+    },
+    {
+      nome: [32m'Samira Rath'[39m,
+      email: [32m'sebastian.rutherford@yahoo.com'[39m,
+      password: [32m'LZm33lf^'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'cejcH84pMSZysG4r'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.3573421433031372fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'd1cphPML3SE19RNU'[39m
+    },
+    {
+      nome: [32m'Danuza Gaia'[39m,
+      email: [32m'dnz.gaia@gmail.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'd6bJwnQQEnewF3N2'[39m
+    },
+    {
+      nome: [32m'Ana Costa'[39m,
+      email: [32m'AnaCosta@yahoo.com'[39m,
+      password: [32m'310nrkMh'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'dentzKy53U0SkYwv'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.21230447531524566fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'e81bJBdPy4IDDTNP'[39m
+    },
+    {
+      nome: [32m'Felisa Cummerata DDS'[39m,
+      email: [32m'arla.grant@hotmail.com'[39m,
+      password: [32m'155#e!%01E'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'e94txt6pUMMnrMch'[39m
+    },
+    {
+      nome: [32m'Huey Becker'[39m,
+      email: [32m'phylis.mayer@hotmail.com'[39m,
+      password: [32m'$PN^#8E$f#@'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'epZNdq7Mo1oREIFe'[39m
+    },
+    {
+      nome: [32m'Cintia maria'[39m,
+      email: [32m'luara.silva@gmail.com'[39m,
+      password: [32m'123cintia'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'f1w3tBls6hf8QbRN'[39m
+    },
+    {
+      nome: [32m'João Silva'[39m,
+      email: [32m'joao.silva1737731531749@teste.com'[39m,
+      password: [32m'senha123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'fiyCbQzmKWDgIHBL'[39m
+    },
+    {
+      nome: [32m'Luiz Fernando Sousa'[39m,
+      email: [32m'yasminmartins@example.net'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'hjoPeKPx8LmxzRKC'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.4120628735934664fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'hqRwh4VRy6XlNTC0'[39m
+    },
+    {
+      nome: [32m'Teodora Runolfsdottir'[39m,
+      email: [32m'ken.goodwin@gmail.com'[39m,
+      password: [32m'Fzh^^Jd@#1u'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'hxl5enB13AIxewUn'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva PUT'[39m,
+      email: [32m'0.020640299158816156fulanoPUT@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'i0AxtdPWVog6TAjD'[39m
+    },
+    {
+      nome: [32m'Maiya'[39m,
+      email: [32m'Verda95@gmail.com'[39m,
+      password: [32m'w6ngGAQE0wFCLjn'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'jTHboubQC789inTL'[39m
+    },
+    {
+      nome: [32m'Taina Pfannerstill II'[39m,
+      email: [32m'diann.mayert@gmail.com'[39m,
+      password: [32m'hM^23!U0UBIWR1%M'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'jqXPdoqmejplYrfD'[39m
+    },
+    {
+      nome: [32m'Orlando Silva Teste'[39m,
+      email: [32m'orlandoT@gmail.com'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'kXJecyszjfE63Drv'[39m
+    },
+    {
+      nome: [32m'admin'[39m,
+      email: [32m'admin@gmail.com'[39m,
+      password: [32m'123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'kZX72HWjgnV5jo1T'[39m
+    },
+    {
+      nome: [32m'Joana Maria'[39m,
+      email: [32m'joana_maria@gmail.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'kiTCXuqzF4fxOwkV'[39m
+    },
+    ... 39 more items
+  ]
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT-02-POST-Deve validar obrigatoriedade do campo nome sem preenchimento" classname="api.spec.ts" time="0.205">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgxLCJleHAiOjE3Mzc3NTI5ODF9.fqCiODLJrjDukfXke2r0Qo36-IdYzbWWQrhVyYWsHzs'[39m
+}
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 6b6cd19866e2210046e8f29fbf26a8a0
+  Date: Fri, 24 Jan 2025 20:59:41 GMT
+  Server: Google Frontend
+  Content-Length: 48
+[33m400[39m
+{ nome: [32m'nome não pode ficar em branco'[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT-03-POST-Deve validar obrigatoriedade de preenchimento do campo Email, Status Code e Mensagem de erro" classname="api.spec.ts" time="0.186">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgxLCJleHAiOjE3Mzc3NTI5ODF9.fqCiODLJrjDukfXke2r0Qo36-IdYzbWWQrhVyYWsHzs'[39m
+}
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: eaf4d10b0c4c18f29a3e70fe25e3cd40
+  Date: Fri, 24 Jan 2025 20:59:41 GMT
+  Server: Google Frontend
+  Content-Length: 50
+[33m400[39m
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: eaf4d10b0c4c18f29a3e70fe25e3cd40
+  Date: Fri, 24 Jan 2025 20:59:41 GMT
+  Server: Google Frontend
+  Content-Length: 50
+[36m[AsyncFunction: body][39m
+{ email: [32m'email não pode ficar em branco'[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT04-POST-Deve validar obrigatoriedade de preenchimento do campo Password, Status Code e Mensagem de erro" classname="api.spec.ts" time="0.187">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgxLCJleHAiOjE3Mzc3NTI5ODF9.fqCiODLJrjDukfXke2r0Qo36-IdYzbWWQrhVyYWsHzs'[39m
+}
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 50bf955cac5a154d0e258c37a39662d7
+  Date: Fri, 24 Jan 2025 20:59:42 GMT
+  Server: Google Frontend
+  Content-Length: 56
+[33m400[39m
+{ password: [32m'password não pode ficar em branco'[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT-05-POST-Deve validar obrigatoriedade de preenchimento do campo administrador, Status Code e Mensagem de erro" classname="api.spec.ts" time="0.163">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgyLCJleHAiOjE3Mzc3NTI5ODJ9.VZKRoFrOzzamYGEvnmUxg4B5_NRwFcJGuc6S9JxbgAc'[39m
+}
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: b432da6406038727340611749dff000f
+  Date: Fri, 24 Jan 2025 20:59:42 GMT
+  Server: Google Frontend
+  Content-Length: 67
+[33m400[39m
+{ administrador: [32m"administrador deve ser 'true' ou 'false'"[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT-06-POST-Deve poder incluir um usuário" classname="api.spec.ts" time="0.172">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgyLCJleHAiOjE3Mzc3NTI5ODJ9.VZKRoFrOzzamYGEvnmUxg4B5_NRwFcJGuc6S9JxbgAc'[39m
+}
+APIResponse: 201 Created
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 36cebdb74ed4618ccf9113c3a1e4e850
+  Date: Fri, 24 Jan 2025 20:59:42 GMT
+  Server: Google Frontend
+  Content-Length: 82
+[33m201[39m
+{ message: [32m'Cadastro realizado com sucesso'[39m, _id: [32m'0stoZMwVxfftMPDu'[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT07-GET-Deve validar Código ID Invalido" classname="api.spec.ts" time="0.147">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgyLCJleHAiOjE3Mzc3NTI5ODJ9.VZKRoFrOzzamYGEvnmUxg4B5_NRwFcJGuc6S9JxbgAc'[39m
+}
+[33m200[39m
+{
+  nome: [32m'Fulano da Silva POST'[39m,
+  email: [32m'0.06436745313447689fulanoPOST@qa.com.br'[39m,
+  password: [32m'teste'[39m,
+  administrador: [32m'true'[39m,
+  _id: [32m'0stoZMwVxfftMPDu'[39m
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT08-GET-Deve Consultar Todos" classname="api.spec.ts" time="0.162">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgyLCJleHAiOjE3Mzc3NTI5ODJ9.VZKRoFrOzzamYGEvnmUxg4B5_NRwFcJGuc6S9JxbgAc'[39m
+}
+[33m200[39m
+{
+  nome: [32m'Fulano da Silva POST'[39m,
+  email: [32m'0.06436745313447689fulanoPOST@qa.com.br'[39m,
+  password: [32m'teste'[39m,
+  administrador: [32m'true'[39m,
+  _id: [32m'0stoZMwVxfftMPDu'[39m
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT-09-PUT-Deve poder alterar Usuário" classname="api.spec.ts" time="0.155">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgyLCJleHAiOjE3Mzc3NTI5ODJ9.VZKRoFrOzzamYGEvnmUxg4B5_NRwFcJGuc6S9JxbgAc'[39m
+}
+[33m200[39m
+{ message: [32m'Registro alterado com sucesso'[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT-10-PUT-Deve retornar erro - obrigatoriedade de preenchimento do campo nome" classname="api.spec.ts" time="0.162">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgyLCJleHAiOjE3Mzc3NTI5ODJ9.VZKRoFrOzzamYGEvnmUxg4B5_NRwFcJGuc6S9JxbgAc'[39m
+}
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 346eef7b5b79c00733459d8e15879ad4
+  Date: Fri, 24 Jan 2025 20:59:43 GMT
+  Server: Google Frontend
+  Content-Length: 48
+[33m400[39m
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 346eef7b5b79c00733459d8e15879ad4
+  Date: Fri, 24 Jan 2025 20:59:43 GMT
+  Server: Google Frontend
+  Content-Length: 48
+[36m[AsyncFunction: body][39m
+{ nome: [32m'nome não pode ficar em branco'[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT-11-PUT-Deve retornar erro - obrigatoriedade de preenchimento do campo Email e status code 400" classname="api.spec.ts" time="0.16">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgzLCJleHAiOjE3Mzc3NTI5ODN9.1iOL5CuAphIolFR29Nt11_6i66R-1B8cOBLdGJClcyg'[39m
+}
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 5f3ad1f74bc9058f63b5b5274cb3e05c
+  Date: Fri, 24 Jan 2025 20:59:43 GMT
+  Server: Google Frontend
+  Content-Length: 50
+[33m400[39m
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 5f3ad1f74bc9058f63b5b5274cb3e05c
+  Date: Fri, 24 Jan 2025 20:59:43 GMT
+  Server: Google Frontend
+  Content-Length: 50
+[36m[AsyncFunction: body][39m
+{ email: [32m'email não pode ficar em branco'[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT-12-PUT-Deve retornar erro - obrigatoriedade de preenchimento do campo Password e status code 400" classname="api.spec.ts" time="0.147">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgzLCJleHAiOjE3Mzc3NTI5ODN9.1iOL5CuAphIolFR29Nt11_6i66R-1B8cOBLdGJClcyg'[39m
+}
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 7b3f9ba327e6db0e7906465d7034ff79
+  Date: Fri, 24 Jan 2025 20:59:43 GMT
+  Server: Google Frontend
+  Content-Length: 56
+[33m400[39m
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 7b3f9ba327e6db0e7906465d7034ff79
+  Date: Fri, 24 Jan 2025 20:59:43 GMT
+  Server: Google Frontend
+  Content-Length: 56
+[36m[AsyncFunction: body][39m
+{ password: [32m'password não pode ficar em branco'[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT-13-PUT-Deve retornar erro - obrigatoriedade de preenchimento do campo Administrador e status code 400" classname="api.spec.ts" time="0.169">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgzLCJleHAiOjE3Mzc3NTI5ODN9.1iOL5CuAphIolFR29Nt11_6i66R-1B8cOBLdGJClcyg'[39m
+}
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 1eab1627e3016b91af9212510e2efb3f
+  Date: Fri, 24 Jan 2025 20:59:43 GMT
+  Server: Google Frontend
+  Content-Length: 67
+[33m400[39m
+APIResponse: 400 Bad Request
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 1eab1627e3016b91af9212510e2efb3f
+  Date: Fri, 24 Jan 2025 20:59:43 GMT
+  Server: Google Frontend
+  Content-Length: 67
+[36m[AsyncFunction: body][39m
+{ administrador: [32m"administrador deve ser 'true' ou 'false'"[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT-14-DELETE-Validação de Id invalido mensagem e status code" classname="api.spec.ts" time="0.157">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgzLCJleHAiOjE3Mzc3NTI5ODN9.1iOL5CuAphIolFR29Nt11_6i66R-1B8cOBLdGJClcyg'[39m
+}
+APIResponse: 200 OK
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: c2614a56d00f9178d5fe89e3a0399c71
+  Date: Fri, 24 Jan 2025 20:59:43 GMT
+  Server: Google Frontend
+  Content-Length: 46
+[33m200[39m
+APIResponse: 200 OK
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: c2614a56d00f9178d5fe89e3a0399c71
+  Date: Fri, 24 Jan 2025 20:59:43 GMT
+  Server: Google Frontend
+  Content-Length: 46
+[36m[AsyncFunction: body][39m
+{ message: [32m'Nenhum registro excluído'[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › CT-15-DELETE-Deve poder Deletar" classname="api.spec.ts" time="0.162">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzM3NzUyMzgzLCJleHAiOjE3Mzc3NTI5ODN9.1iOL5CuAphIolFR29Nt11_6i66R-1B8cOBLdGJClcyg'[39m
+}
+[33m200[39m
+{ message: [32m'Nenhum registro excluído'[39m }
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
